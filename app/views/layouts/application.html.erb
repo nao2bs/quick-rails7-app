@@ -8,10 +8,23 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
+
   </head>
 
-  <body>
+  <body class="<%= cookies[:theme] %>">
     <main class="container mx-auto mt-28 px-5 flex">
+     
+      <% if cookies[:theme] === 'dark' %>
+        <%= link_to(set_theme_path(theme: 'light')) do %>
+          <i class="fa-solid fa-sun" title="プロフィール"></i>
+        <% end %>
+      <% else %>
+        <%= link_to(set_theme_path(theme: 'dark')) do %>
+          <i class="fa-solid fa-moon" title="プロフィール"></i>
+        <% end %>
+      <% end %>
       <%= yield %>
     </main>
   </body>
