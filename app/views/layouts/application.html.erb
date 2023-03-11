@@ -25,6 +25,15 @@
           <i class="fa-solid fa-moon" title="プロフィール"></i>
         <% end %>
       <% end %>
+
+      <!-- ログインしている場合 -->
+      <% if user_signed_in? %>
+        <%= button_to("ログアウト", destroy_user_session_path, method: :delete) %>
+      <% else %>
+      <!-- ログインしていない場合 -->
+        <%= button_to("ゲスト（閲覧用）", pages_guest_sign_in_path, method: :post) %>
+      <% end %>
+
       <%= yield %>
     </main>
   </body>
