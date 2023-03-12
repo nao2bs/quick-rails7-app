@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # http://localhost:3000
-  root "pages#index"
+  root to: "pages#index"
 
   # http://localhost:3000/pages/home
   get "pages/home"
