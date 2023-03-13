@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+このサンプルアプリは Rails7 とログイン機能でよく使う Devise と  
+TailwwindCSS をまとめて DockerCompose で起動するようにパッケージングしたものです。
 
-Things you may want to cover:
+### バージョン情報
 
-* Ruby version
+Docker  
+Docker-Compose  
+Ruby3.1.2  
+Rails7.0.4
 
-* System dependencies
+### 起動方法
 
-* Configuration
+このリポジトリをクローン後、docker compose コマンドで実行。
 
-* Database creation
+### 使用している gem
 
-* Database initialization
+- Devise
+- Tailwindcssed
 
-* How to run the test suite
+### 機能詳細
 
-* Services (job queues, cache servers, search engines, etc.)
+- Top ページ  
+  http://localhost:3000/
 
-* Deployment instructions
+- Devise のサインアップ機能  
+  http://localhost:3000/users/sign_up
 
-* ...
+- Devise のログイン機能  
+  http://localhost:3000/users/sign_in
+
+- ゲストユーザーログイン
+
+- Rspec での簡単なテスト（Devise）

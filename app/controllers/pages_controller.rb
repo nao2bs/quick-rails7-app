@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!, only: [:home]
-
+  #skip_before_action :verify_authenticity_token
+  
   def index
     @title = "index"
   end
