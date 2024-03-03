@@ -78,3 +78,4 @@ end
 gem "devise"
 gem 'bootstrap-sass'
 gem "kaminari"
+gem "ransack"
