@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # http://localhost:3000
-  root to: "pages#index"
+  # root to: "pages#index"
 
   # http://localhost:3000/pages/home
   get "pages/home"
@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   post '/pages/guest_sign_in', to: 'pages#new_guest'
 
+  root to: redirect("/cats")
 end
